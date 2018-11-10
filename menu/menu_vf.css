@@ -54,8 +54,8 @@ ul .left {
   background-color: #3FA3C4;
   }
 
-  /* Mobile Styles */
-@media only screen and (max-width: 960px) {
+  /* Mobile & Tablet Styles */
+@media only screen and (max-width: 721px) {
   
   .sidenav {
     padding-top: 15px;
@@ -103,25 +103,9 @@ ul .left {
   }
 }
 
-/* Tablet Styles *//*
-@media only screen and (min-width: 401px) and (max-width: 960px) {
- 
-  .lapnav{
-    display: none;
-  }
-
-  ul .right {
-    display: none;
-  }
-
-  ul .left {
-    display: none;
-  }
-
-}*/
 
 /* Desktop Styles */
-@media only screen and (min-width: 961px) {
+@media only screen and (min-width: 720px) {
   
   #mobnav{
     display: none;
