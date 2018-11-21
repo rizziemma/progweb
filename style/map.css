@@ -1,0 +1,70 @@
+/* FEUILLE DE STYLE POOUR CARTE INTERACTIVE*/
+
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+  	#map_container
+	{
+		width:100%;
+		margin:0 auto;
+	}
+
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  	#map_container
+	{
+		width:90%;
+		margin:0 auto;
+	}
+
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  	#map_container
+	{
+		width:80%;
+		margin:0 auto;
+	}
+
+}
+
+
+/* Pour chaque zone de pays*/
+.land
+{
+	fill: #cccccc;
+	fill-opacity: 0.5;
+	stroke:white;
+	stroke-opacity: 1;
+	stroke-width:0.5;
+	transition: fill-opacity .2s ease-in-out;
+}
+
+
+#FR{
+	fill:#3333ff ;
+	
+}
+
+#CA{
+	fill:#e60000;
+}
+
+#RU{
+	fill:#e6b800;
+}
+#US{
+	fill:#33CCCC;
+}
+#GB{
+	fill:#73e600;
+}
+
+.land:hover
+{
+	fill-opacity: 1;
+}
+

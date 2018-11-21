@@ -3,10 +3,13 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Template University</title>
-		<link rel="stylesheet" href="map/map.css">
+		<link rel="stylesheet" href="style/map.css">
+		<link rel="stylesheet" href="/style/body.css">
 	</head>
 	<body>
+	
 	<div Id="map_container">
+	
 	<svg xmlns="http://www.w3.org/2000/svg" xmlns:amcharts="http://amcharts.com/ammap" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewbox="0 0 1100 700">
 	<defs>
 		<amcharts:ammap projection="mercator" leftLongitude="-169.6" topLatitude="83.68" rightLongitude="190.25" bottomLatitude="-55.55"></amcharts:ammap>
@@ -200,13 +203,21 @@
 	
 	
 	<script>
-		let countries_uni=["US", "FR", "RU"];
+		let countries_uni=["US", "FR", "RU", "CA"];
 		let pays = document.getElementsByClassName("land");
-	
+		
 		function clickOnCountry(e){
+		
 			if (countries_uni.includes(e.target.getAttribute('id')))
 			{
-				window.location=("university/"+(e.target.getAttribute('id')+".html"));
+				switch (e.target.getAttribute('id')){
+					case "CA" : 
+						window.location=("universite/ETS.html");
+						break;
+					default : 
+						break;
+				}
+				//window.location=("university/"+(e.target.getAttribute('id')+".html"));
 				
 			}
 		}
