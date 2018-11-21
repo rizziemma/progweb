@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>A Propos</title>
+		<link rel="stylesheet" type="text/css" href="style/body.css">
+		<link rel="stylesheet" type="text/css" href="style/menu.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
+		
+	</head>
+	
+	<body>
+	<span id="menu">
+		  		<div class="lapnav" id="lapnav" style="opacity:1">
+        <ul>
+                <a class="left" href="accueil/accueil.html"><i class="fa fa-fw fa-home"></i> Accueil</a> 
+                <a class = "right" href="about.html"><i class="fa fa-fw fa-info"></i>A propos</a>
+                <a href="map.html"  class = "right"><i class="fa fa-fw fa-university"></i> Universités</a> 
+                <a class = "right" href="contact.html"><i class="fa fa-fw fa-envelope"></i> Contacts</a> 
+
+        </ul>
+      </div>
+      	
+
+      <!--mobile menu-->
+      <div id="mobnav">
+          <div id="mySidenav" class="sidenav">
+            <ul>
+                <a href="javascript:void(0)" class="closebtn"  onclick="closeNav()">&times;</a>
+                <a href="accueil/accueil.html">Accueil</a>
+                <a href="map.html">Universités</a>
+                <a href="contact.html">Contacts</a>
+                <a href="about.html">A propos</a>
+              </ul>
+          </div>
+
+      
+          <span style="font-size:30px;cursor:pointer" onclick="interNav()">&#9776;</span>
+
+      </div>
+
+      <script>
+          let open = false;
+
+          function openNav() {
+              document.getElementById("mySidenav").style.width = "40%";
+          }
+          function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+          }
+
+          function interNav() {
+              if (open){ 
+                  closeNav();
+                  open=false;
+              }else{
+                  openNav();
+                  open=true;
+              }
+          }
+
+          
+
+      </script>
+	</span>
+		<div id="contenu">
+			<h1>Qui sommes-nous?</h1>
+			<p>Ce site a été créé par une équipe d'étudiants de l'INSA de Toulouse</p>
+		</div>
+	</body>
+</html>
