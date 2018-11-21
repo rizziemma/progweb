@@ -2,17 +2,70 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 		<title>ETS</title>
 		<link rel="stylesheet" href="../style/uni.css">
 		<link rel="stylesheet" href="../style/bouton_haut.css">
 		<link rel="stylesheet" href="../style/body.css">
-		
+		<link rel="stylesheet" href="../style/menu.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">		
 		
 	</head>
 	
 	<body>
-	
+	<span id="menu">
+		  		<div class="lapnav" id="lapnav" style="opacity:1">
+        <ul>
+                <a class="left" href="#"><i class="fa fa-fw fa-home"></i> Accueil</a> 
+                <a class = "right" href="#"><i class="fa fa-fw fa-info"></i>A propos</a>
+                <a href="#"  class = "right"><i class="fa fa-fw fa-university"></i> Universités</a> 
+                <a class = "right" href="#"><i class="fa fa-fw fa-envelope"></i> Contacts</a> 
+
+        </ul>
+      </div>
+      	
+
+      <!--mobile menu-->
+      <div id="mobnav">
+          <div id="mySidenav" class="sidenav">
+            <ul>
+                <a href="javascript:void(0)" class="closebtn"  onclick="closeNav()">&times;</a>
+                <a href="#">Accueil</a>
+                <a href="#">Universités</a>
+                <a href="#">Contacts</a>
+                <a href="#">A propos</a>
+              </ul>
+          </div>
+
+      
+          <span style="font-size:30px;cursor:pointer" onclick="interNav()">&#9776;</span>
+
+      </div>
+
+      <script>
+          let open = false;
+
+          function openNav() {
+              document.getElementById("mySidenav").style.width = "40%";
+          }
+          function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+          }
+
+          function interNav() {
+              if (open){ 
+                  closeNav();
+                  open=false;
+              }else{
+                  openNav();
+                  open=true;
+              }
+          }
+
+          
+
+      </script>
+	</span>
 	<a name="haut" id="haut"></a>
 	
 	<!--Diapo images -->
@@ -99,6 +152,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   window.onscroll = function(ev) {
     document.getElementById("cRetour").className = (window.pageYOffset > 100) ? "cVisible" : "cInvisible";
+    document.getElementById("lapnav").style = (window.pageYOffset > 50) ? "opacity:0.8" : "opacity:1";
   };
   
   diapo();
