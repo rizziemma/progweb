@@ -1,0 +1,20 @@
+body
+{
+	/*background-color: white;*/
+	/*background: url("pic01.jpg") fixed no-repeat;*/
+	/*background-image: url("background.jpg") ;
+	background-attachment: fixed;
+	background-position: bottom left;
+	background-size: cover ;
+	overflow: auto;
+	word-wrap: break-word;*/
+}
+
+.logo
+{
+	height: auto;
+    position: fixed;
+    right: 10px;
+    bottom: 5px;
+    max-width: 15%;
+}

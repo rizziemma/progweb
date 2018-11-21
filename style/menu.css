@@ -55,13 +55,17 @@ ul .left {
   padding: 0;
   overflow: hidden;
   background-color: #3FA3C4;
+}
+
+#menu{
+  z-index:1000;
+  position : fixed;
   width: 100%;
-  position: fixed;
   top:0;
   left: 0;
 }
-
   /* Mobile & Tablet Styles */
+}
 @media only screen and (max-width: 721px) {
   
   .sidenav {
