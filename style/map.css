@@ -1,4 +1,4 @@
-/* FEUILLE DE STYLE POOUR CARTE INTERACTIVE*/
+/* FEUILLE DE STYLE POUR CARTE INTERACTIVE*/
 
 
 /* Mobile Styles */
@@ -7,6 +7,14 @@
 	{
 		width:100%;
 		margin:0 auto;
+	}
+	h1{
+		font-size : 3em;
+	}
+	
+	h2{
+		font-size : 0.7 em;
+		font-style:italic;
 	}
 
 }
@@ -19,6 +27,14 @@
 		margin:0 auto;
 	}
 
+	h1{
+		font-size : 3em;
+	}
+	
+	h2{
+		font-size : 0.7 em;
+		font-style:italic;
+	}
 }
 
 /* Desktop Styles */
@@ -28,7 +44,14 @@
 		width:80%;
 		margin:0 auto;
 	}
-
+	h1{
+		font-size : 3em;
+	}
+	
+	h2{
+		font-size : 0.7 em;
+		font-style:italic;
+	}
 }
 
 
@@ -68,3 +91,10 @@
 	fill-opacity: 1;
 }
 
+h1,h2{
+		text-align:center;
+}
+
+h2{
+	padding-bottom : 3em;
+}

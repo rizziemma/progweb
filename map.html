@@ -3,10 +3,75 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Template University</title>
+		<link rel="stylesheet" href="style/body.css">
+		<link rel="stylesheet" href="style/menu.css">
 		<link rel="stylesheet" href="style/map.css">
-		<link rel="stylesheet" href="/style/body.css">
+		<link rel="stylesheet" href="style/bouton_haut.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">		
 	</head>
 	<body>
+	
+	<a name="haut" id="haut"></a>
+
+	<span id="menu">
+		  		<div class="lapnav" id="lapnav" style="opacity:1">
+        <ul>
+                <a class="left" href="../accueil/accueil.html"><i class="fa fa-fw fa-home"></i> Accueil</a> 
+                <a class = "right" href="../about.html"><i class="fa fa-fw fa-info"></i>A propos</a>
+                <a href="../map.html"  class = "right"><i class="fa fa-fw fa-university"></i> Universités</a> 
+                <a class = "right" href="../contact.html"><i class="fa fa-fw fa-envelope"></i> Contacts</a> 
+
+        </ul>
+      </div>
+      	
+
+      <!--mobile menu-->
+      <div id="mobnav">
+          <div id="mySidenav" class="sidenav">
+            <ul>
+                <a href="javascript:void(0)" class="closebtn"  onclick="closeNav()">&times;</a>
+                <a href="../accueil/accueil.html">Accueil</a>
+                <a href="../map.html">Universités</a>
+                <a href="../contact.html">Contacts</a>
+                <a href="../about.html">A propos</a>
+              </ul>
+          </div>
+
+      
+          <span style="font-size:30px;cursor:pointer" onclick="interNav()">&#9776;</span>
+
+      </div>
+
+      <script>
+          let open = false;
+
+          function openNav() {
+              document.getElementById("mySidenav").style.width = "40%";
+          }
+          function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+          }
+
+          function interNav() {
+              if (open){ 
+                  closeNav();
+                  open=false;
+              }else{
+                  openNav();
+                  open=true;
+              }
+          }
+
+          
+
+      </script>
+	</span>
+	
+	
+	<div id = "contenu" >
+	
+	<h1>Liste des universités partenaires</h1>
+	<h2>Cliquez sur un pays pour en savoir plus sur l'université associée</h2>
 	
 	<div Id="map_container">
 	
@@ -200,7 +265,7 @@
 	</div>
 	
 	
-	
+	</div>
 	
 	<script>
 		let countries_uni=["US", "FR", "RU", "CA"];
@@ -225,5 +290,19 @@
 			pays[i].addEventListener('click',clickOnCountry);
 		}
 	</script>
+	
+	
+		
+<div><a id="cRetour" class="cInvisible" href="#haut"></a></div>
+	<script>
+document.addEventListener('DOMContentLoaded', function() {
+  window.onscroll = function(ev) {
+    document.getElementById("cRetour").className = (window.pageYOffset > 100) ? "cVisible" : "cInvisible";
+    document.getElementById("lapnav").style = (window.pageYOffset > 50) ? "opacity:0.8" : "opacity:1";
+  };
+  
+
+});
+</script>
 	</body>
 </html>
