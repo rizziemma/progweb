@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<title>ETS</title>
+		<link rel="stylesheet" href="../style/body.css">
+		<link rel="stylesheet" href="../style/uni.css">
+		<link rel="stylesheet" href="../style/bouton_haut.css">
+		<link rel="stylesheet" href="../style/menu.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">		
+		
+	</head>
+	
+	<body>
+	<span id="menu">
+		  		<div class="lapnav" id="lapnav" style="opacity:1">
+        <ul>
+                <a class="left" href="../accueil/accueil.html"><i class="fa fa-fw fa-home"></i> Accueil</a> 
+                <a class = "right" href="../about.html"><i class="fa fa-fw fa-info"></i>A propos</a>
+                <a href="../map.html"  class = "right"><i class="fa fa-fw fa-university"></i> Universités</a> 
+                <a class = "right" href="../contact.html"><i class="fa fa-fw fa-envelope"></i> Contacts</a> 
+
+        </ul>
+      </div>
+      	
+
+      <!--mobile menu-->
+      <div id="mobnav">
+          <div id="mySidenav" class="sidenav">
+            <ul>
+                <a href="javascript:void(0)" class="closebtn"  onclick="closeNav()">&times;</a>
+                <a href="../accueil/accueil.html">Accueil</a>
+                <a href="../map.html">Universités</a>
+                <a href="../contact.html">Contacts</a>
+                <a href="../about.html">A propos</a>
+              </ul>
+          </div>
+
+      
+          <span style="font-size:30px;cursor:pointer" onclick="interNav()">&#9776;</span>
+
+      </div>
+
+      <script>
+          let open = false;
+
+          function openNav() {
+              document.getElementById("mySidenav").style.width = "40%";
+          }
+          function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+          }
+
+          function interNav() {
+              if (open){ 
+                  closeNav();
+                  open=false;
+              }else{
+                  openNav();
+                  open=true;
+              }
+          }
+
+          
+
+      </script>
+	</span>
+	<a name="haut" id="haut"></a>
+	
+	<!--Diapo images -->
+		<div class="slide_container" >
+			<img class="Slide" src="ETS/1.jpg" style="width:100%">
+			<img class="Slide" src="ETS/2.jpg" style="width:100%">
+			<img class="Slide" src="ETS/3.jpg" style="width:100%">
+			
+			<div class="Entete">
+				<h2>ETS</h2>
+				<h1>Montréal</h1>
+			</div>
+		
+		
+			<div class="bouton" style="width:100%">
+				<div class="bouton_fleche gauche bouton" onclick="plusDivs(-1)">&#10094;</div>
+				<div class="bouton_fleche droite bouton" onclick="plusDivs(1)">&#10095;</div>
+				<div class="bouton_cercle bouton">
+					<span  class="circle" onclick="currentDiv(1)">&#9675;</span>
+					<span  class="circle" onclick="currentDiv(2)">&#9675;</span>
+					<span  class="circle" onclick="currentDiv(3)">&#9675;</span>
+				</div>
+			</div>
+		</div>
+
+	<script>
+		var slideIndex = 3;
+		showDivs(slideIndex);
+
+		function plusDivs(n) {
+			showDivs(slideIndex += n);
+		}
+
+		function currentDiv(n) {
+			showDivs(slideIndex = n);
+		}
+
+		function showDivs(n) {
+			var i;
+			var x = document.getElementsByClassName("Slide");
+			var dots = document.getElementsByClassName("circle");
+			if (n > x.length) {slideIndex = 1}    
+			if (n < 1) {slideIndex = x.length}
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";  
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].innerHTML = "&#9675";
+			}
+			x[slideIndex-1].style.display = "block";  
+			dots[slideIndex-1].innerHTML = "&#9679";
+		}
+		
+		function diapo(){
+			showDivs(slideIndex +=1);
+			setTimeout(diapo,5000);
+		}
+	</script>
+	
+	
+	
+		<div id="contenu">
+		
+		<p>
+			<h3 id="Presentation">Présentation</h1>
+			Description de l'université (une phrase, pays, ville, spécialité, pour quelle PO)
+		</p>
+		
+		<p>
+			<h3 id="Documents">Documents utiles</h1>
+			<a>liens de documents à télécharger, learnings ect..</a>
+		</p>
+		
+		<p>	
+			<h3 id="Plus">En savoir plus</h1>
+			Site de l'université, mail de contact, lien vers des infos diverses sur la ville, ect...
+		</p>
+	</div>
+	
+	
+<div><a id="cRetour" class="cInvisible" href="#haut"></a></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  window.onscroll = function(ev) {
+    document.getElementById("cRetour").className = (window.pageYOffset > 100) ? "cVisible" : "cInvisible";
+    document.getElementById("lapnav").style = (window.pageYOffset > 50) ? "opacity:0.8" : "opacity:1";
+  };
+  
+  diapo();
+});
+</script>
+	
+	</body>
+</html>
