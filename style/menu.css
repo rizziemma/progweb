@@ -49,6 +49,7 @@ ul .left {
   background-color: #3FA3C4;
   width: 100%;
   position: fixed;
+  z-index : 10;
   top:0;
   left: 0;
 }
