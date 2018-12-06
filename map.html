@@ -4,10 +4,10 @@
 		<meta charset="utf-8" />
 		<title>Template University</title>
 		<link rel="stylesheet" href="style/body.css">
-		<link rel="stylesheet" href="style/menu.css">
 		<link rel="stylesheet" href="style/map.css">
 		<link rel="stylesheet" href="style/bouton_haut.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
+<link rel="stylesheet" href="style/menu.css">	
 	</head>
 	<body>
 	
@@ -38,7 +38,7 @@
           </div>
 
       
-          <span style="font-size:30px;cursor:pointer" onclick="interNav()">&#9776;</span>
+          <span style="cursor:pointer" onclick="interNav()">&#9776;</span>
 
       </div>
 
@@ -268,16 +268,36 @@
 	</div>
 	
 	<script>
-		let countries_uni=["US", "FR", "RU", "CA"];
+		let countries_uni=["US", "CA", "RU", "BR", "GB", "ES", "CN", "AU"];
 		let pays = document.getElementsByClassName("land");
-		
 		function clickOnCountry(e){
 		
 			if (countries_uni.includes(e.target.getAttribute('id')))
 			{
 				switch (e.target.getAttribute('id')){
 					case "CA" : 
-						window.location=("universite/ETS.html");
+						window.location=("universite/ETS/ETS.html");
+						break;
+					case "US" :
+						window.location=("universite/UCLA/UCLA.html");
+						break;
+					case "GB" : 
+						window.location=("universite/UB/UB.html");
+						break;
+					case "ES" : 
+						window.location=("universite/US/US.html");
+						break;
+					case "RU" : 
+						window.location=("universite/FEFU/FEFU.html");
+						break;
+					case "CN" : 
+						window.location=("universite/NU/NU.html");
+						break;
+					case "AU" : 
+						window.location=("universite/UC/UC.html");
+						break;
+					case "BR" : 
+						window.location=("universite/USP/USP.html");
 						break;
 					default : 
 						break;

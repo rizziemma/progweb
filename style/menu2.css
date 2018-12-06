@@ -1,5 +1,4 @@
 
-
 ul {
   list-style-type: none;
   margin-top: 0.9em;
@@ -7,26 +6,6 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: #3FA3C4;
-}
-#lapnav{
-  transition:opacity ease-in-out 0.5s;
-}
-
-/*Quand on passe la souris dessus*/
-.lapnav a:hover {
-	color: black;
-}
-
-#homepic{
-	padding: 0;
-}
-
-.lapnav a {
-  float: left;
-  padding: 12px;
-  color: white;
-  text-decoration: none;
-  font-size: 17px;
 }
 
 ul .right {
@@ -41,22 +20,11 @@ ul .left {
 
 }
 
-.lapnav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #3FA3C4;
-  width: 100%;
-  position: fixed;
-  top:0;
-  left: 0;
-}
 
   /* Mobile & Tablet Styles */
+}
 @media only screen and (max-width: 721px) {
   
-
   .sidenav {
     padding-top: 15px;
   }
@@ -69,7 +37,7 @@ ul .left {
   .sidenav {
       
     height: 100%;
-    width: 40%;
+    width: 0;
 
     position: fixed;
     z-index: 1;
@@ -98,20 +66,9 @@ ul .left {
     position: absolute;
     top: 0;
     right: 25px;
-    font-size: 4em;
+    font-size: 36px;
     margin-left: 50px;
   }
-
-#mobnav span {
-	font-size : 4em;
-	position : fixed;
-	color:#fff;
-	border-radius:20%;
-  	background:rgba(0, 0, 0, 0.50);
-	margin : 5px 10px ;
-  	font-size:50px;
-	padding : 0px 10px 4px 10px ;
-}
 }
 
 
@@ -121,5 +78,39 @@ ul .left {
   #mobnav{
     display: none;
   }
+
+
+
+#menu{
+  z-index:10;
+  position : fixed;
+  width: 100%;
+  top:0;
+  left: 0;
+}
+
+.lapnav a:hover {
+	color: black;
+}
+
+#lapnav{
+  transition:opacity ease-in-out 0.5s;
+}
+
+.lapnav a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.lapnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #3FA3C4;
+}
 
 }
