@@ -7,7 +7,9 @@
 		<link rel="stylesheet" href="style/map.css">
 		<link rel="stylesheet" href="style/bouton_haut.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
-<link rel="stylesheet" href="style/menu.css">	
+		<link rel="stylesheet" href="style/menu.css">	
+		<link rel="stylesheet" href="style/tableau.css">
+
 	</head>
 	<body>
 	
@@ -44,21 +46,22 @@
 
       <script>
           let open = false;
+		  document.getElementById("mySidenav").style.width = "0";
 
           function openNav() {
               document.getElementById("mySidenav").style.width = "40%";
+			  open = true;
           }
           function closeNav() {
               document.getElementById("mySidenav").style.width = "0";
+			  open = false;
           }
 
           function interNav() {
               if (open){ 
                   closeNav();
-                  open=false;
               }else{
                   openNav();
-                  open=true;
               }
           }
 
@@ -265,7 +268,10 @@
 	</div>
 	
 	
-	</div>
+	
+	
+	
+
 	
 	<script>
 		let countries_uni=["US", "CA", "RU", "BR", "GB", "ES", "CN", "AU"];
@@ -312,6 +318,149 @@
 	</script>
 	
 	
+	
+	
+	<script>
+            var var_continent= "all";
+            var var_spe= "all";
+
+            function click_continent(C)
+            {
+                var_continent = C.value;
+                tri();
+            }
+
+            function click_spe(S)
+            {
+                var_spe = S.value;
+                tri();
+            }
+
+            function tri()
+            {
+                var i;
+                var lignes=document.getElementsByClassName("all");
+                for(i=0 ; i< lignes.length ; i++)
+                {
+                    let class_i = lignes[i].className.split(' ');
+                    if (class_i.includes(var_spe) && class_i.includes(var_continent))
+                    {
+                        lignes[i].style.display= "table-row";        
+                    }
+                    else
+                    {
+                        lignes[i].style.display= "none";
+                    }
+                }
+            }
+
+        </script>	
+	
+		
+		 <table id=”tableau_universites”>
+
+            <thead id=”en_haut”>
+                <tr class="haut">  <!-- catégories des colonnes dans l’ordre -->
+                    <th class="column1">Université</th>
+                    <th class="column2">Pays - Ville</th>
+                    <th class="column3">Pré-Orientations</th>
+                </tr>
+
+                <tr class="haut">
+                    <th class="column1">
+                    </th>
+
+                    <th class="column2"> 
+
+                        <FORM>
+                        <SELECT name="continent" onChange="click_continent(this)" size="1">
+                        <OPTION selected value = 'all'>tous
+                        <OPTION value='afrique'>Afrique
+                        <OPTION value='amerique'>Amérique
+                        <OPTION value='asie'>Asie
+                        <OPTION value='europe'>Europe
+                        <OPTION value='oceanie'>Océanie
+                        </SELECT>
+                        </FORM>
+
+                    </th>
+
+                    <th class="column3"> 
+
+                        <FORM>
+                        <SELECT name="specialites" onChange="click_spe(this)" size="1">
+                        <OPTION selected onclick="click_spe('all')">toutes
+                        <OPTION class= "cat_ic" value='ic'>IC                       
+                        <OPTION class= "cat_icbe" value='icbe'>ICBE                       
+                        <OPTION class= "cat_imacs" value='imacs'>IMACS                        
+                        <OPTION class= "cat_mic" value='mic'>MIC
+                        </SELECT>
+                        </FORM>
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <!-- à chaque université -->
+                <tr id="ets" class="all amerique mic ic imacs">
+                    <td>ETS</td>
+                    <td>Québec - Montréal</td>
+                    <td>MIC IC IMACS</td>
+                </tr>
+
+                <tr id="ucla" class="all amerique mic icbe imacs">
+                    <td>UCLA</td>
+                    <td>USA - Los Angeles</td>
+                    <td>MIC ICBE IMACS IC</td>
+                </tr>
+
+                <tr id="ub" class="all europe ic imacs icbe">
+                    <td>University of Bath</td>
+                    <td>Angleterre - Bath</td>
+                    <td>IC IMACS ICBE</td>
+                </tr>
+				
+                <tr id="us" class="all europe ic icbe">
+                    <td>Universidad de Sevilla</td>
+                    <td>Espagne - Seville</td>
+                    <td>IC ICBE</td>
+                </tr>
+				
+				<tr id="fefu" class="all asie mic imacs">
+                    <td>FEFU</td>
+                    <td>Russie - Vladivostok</td>
+                    <td>MIC IMACS</td>
+                </tr>
+				
+				<tr id="nu" class="all asie mic ic icbe">
+                    <td>Nanjin University</td>
+                    <td>Chine - Nanjin</td>
+                    <td>MIC IC ICBE</td>
+                </tr>
+				
+				<tr id="uc" class="all oceanie ic imacs icbe">
+                    <td>University of Canberra</td>
+                    <td>Australie - Canberra</td>
+                    <td>IC IMACS ICBE</td>
+                </tr>
+				
+				<tr id="usp" class="all amerique mic ic">
+                    <td>Univesp</td>
+                    <td>Brésil - Sao Paulo</td>
+                    <td>MIC IC</td>
+                </tr>
+
+            </tbody>
+        </table>
+		
+	</div>
+		
+		
+		
+		
+		
+		
+		
 		
 <div><a id="cRetour" class="cInvisible" href="#haut"></a></div>
 	<script>
