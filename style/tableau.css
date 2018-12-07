@@ -1,0 +1,66 @@
+thead
+{
+	border: 2px navy solid;
+}
+
+td
+{
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+
+table
+{
+    /* border: 2px maroon solid ; */
+	border-collapse : collapse;
+	text-align : center;
+	margin: auto;
+    
+}
+
+th
+{
+    background-color : navy ;
+    font-size: 1em;
+    font-family: Trebuchet MS, Arial Black, sans-serif;
+    text-align: center;
+    color: white;
+    padding: 2px 4em 2px 4em;
+    /* margin:3em 7em 3em 7em; */
+
+}
+
+@media screen and (max-width: 700px)
+{
+	th
+	{
+		padding: 2px 5px 2px 5px;
+	}
+
+	td
+	{
+		padding: 20px 10px 20px 10px;
+	}
+}
+
+.column1
+{
+	width:30%;
+}
+
+.column2
+{
+	width:30%;
+}
+
+.column3
+{
+	width:30%;
+}
+
+.all
+{
+	border: 2px white solid;
+	border-bottom-color: navy;
+}
