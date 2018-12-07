@@ -96,10 +96,14 @@
 	fill:#00b300;
 }
 
+#CA:hover{
+cursor : pointer;
+}
 
 .land:hover
 {
 	fill-opacity: 1;
+	
 }
 
 h1,h2{
