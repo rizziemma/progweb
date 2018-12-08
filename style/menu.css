@@ -99,18 +99,18 @@ ul .left {
     position: absolute;
     top: 0;
     right: 25px;
-    font-size: 4em;
+    font-size: 3em;
     margin-left: 50px;
   }
 
-#mobnav span {
-	font-size : 4em;
+#bouton_menu {
+	font-size : 2.2em;
 	position : fixed;
+	z-index : 10;
 	color:#fff;
 	border-radius:20%;
   	background:rgba(0, 0, 0, 0.50);
 	margin : 5px 10px ;
-  	font-size:50px;
 	padding : 0px 10px 4px 10px ;
 }
 }

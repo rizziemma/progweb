@@ -36,29 +36,31 @@
           </div>
 
       
-          <span style="cursor:pointer" onclick="interNav()">&#9776;</span>
+          <span id="bouton_menu" style="cursor:pointer" onclick="interNav()">&#9776;</span>
 
       </div>
 
       <script>
-          let open = false;
+         let open = false;
+		  document.getElementById("mySidenav").style.width = "0";
 
           function openNav() {
               document.getElementById("mySidenav").style.width = "40%";
+			  open = true;
           }
           function closeNav() {
               document.getElementById("mySidenav").style.width = "0";
+			  open = false;
           }
 
           function interNav() {
               if (open){ 
                   closeNav();
-                  open=false;
               }else{
                   openNav();
-                  open=true;
               }
           }
+
 
           
 

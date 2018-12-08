@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-		<title>ETS</title>
+		<title>UC</title>
 		<link rel="stylesheet" href="../../style/body.css">
 		<link rel="stylesheet" href="../../style/uni.css">
 		<link rel="stylesheet" href="../../style/bouton_haut.css">
@@ -38,27 +38,28 @@
           </div>
 
       
-          <span style="cursor:pointer" onclick="interNav()">&#9776;</span>
+          <span id="bouton_menu" style="cursor:pointer" onclick="interNav()">&#9776;</span>
 
       </div>
 
       <script>
           let open = false;
+		  document.getElementById("mySidenav").style.width = "0";
 
           function openNav() {
               document.getElementById("mySidenav").style.width = "40%";
+			  open = true;
           }
           function closeNav() {
               document.getElementById("mySidenav").style.width = "0";
+			  open = false;
           }
 
           function interNav() {
               if (open){ 
                   closeNav();
-                  open=false;
               }else{
                   openNav();
-                  open=true;
               }
           }
 
@@ -75,8 +76,8 @@
 			<img class="Slide" src="3.jpg" style="width:100%">
 			
 			<div class="Entete">
-				<h2>ETS</h2>
-				<h1>Montréal</h1>
+				<h2>University of Canberra</h2>
+				<h1>Australia</h1>
 			</div>
 		
 		
