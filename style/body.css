@@ -5,7 +5,7 @@
 /* Desktop Styles */
 @media only screen and (min-width: 721px) {
   body{
-	font-family: "Arial";
+	font-family: Verdana, sans-serif;
 	background-color:#EEE;
 
 }
