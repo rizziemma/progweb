@@ -1,0 +1,8 @@
+.logo
+{
+	height: auto;
+    position: fixed;
+    right: 10px;
+    bottom: 5px;
+    max-width: 15%;
+}
