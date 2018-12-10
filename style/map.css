@@ -67,6 +67,41 @@
 }
 
 
+/* version test */
+
+#CA{
+	fill: #e81f00;
+	
+}
+
+#US{
+	fill:#ffc400;
+}
+
+#GB{
+	fill:#e87000;
+}
+#ES{
+	fill:#e81f00;
+}
+#RU{
+	fill:#e87000;
+}
+#CN{
+	fill:#e81f00;
+}
+
+#AU{
+	fill:#ffc400;
+}
+#BR{
+	fill:#e87000;
+}
+
+
+
+/* version originale
+
 #CA{
 	fill:#b30000 ;
 	
@@ -95,6 +130,8 @@
 #BR{
 	fill:#00b300;
 }
+
+*/
 
 #CA:hover{
 cursor : pointer;

@@ -6,7 +6,7 @@ menu ul {
   margin-bottom: 0.9em;
   padding: 0;
   overflow: hidden;
-  background-color: #3FA3C4;
+  background-color: #c93000;
 }
 #lapnav{
   transition:opacity ease-in-out 0.5s;
@@ -46,7 +46,7 @@ ul .left {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #3FA3C4;
+  background-color: #c93000;
   width: 100%;
   position: fixed;
   z-index : 10;
@@ -76,7 +76,7 @@ ul .left {
     z-index: 1;
     top: 0;
     right: 0;
-    background-color: #3FA3C4;
+    background-color: #c93000;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
