@@ -15,6 +15,7 @@
 	h2{
 		font-size : 0.7 em;
 		font-style:italic;
+		color: #616161;
 	}
 
 }
@@ -29,11 +30,14 @@
 
 	h1{
 		font-size : 3em;
+
+
 	}
 	
 	h2{
 		font-size : 0.7 em;
 		font-style:italic;
+		color: #616161;
 	}
 }
 
@@ -51,6 +55,8 @@
 	h2{
 		font-size : 0.7 em;
 		font-style:italic;
+		color: #616161;
+
 	}
 }
 
