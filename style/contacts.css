@@ -6,3 +6,52 @@
     bottom: 5px;
     max-width: 15%;
 }
+
+.po
+{
+	display:flex;
+	flex-direction: row;
+}
+
+.paquet
+{
+	display:flex;
+	flex-direction: column;
+	width: 25%;
+}
+
+.block
+{
+	display: block;
+}
+
+.MIC
+{
+	background-color: #ffad96;
+}
+
+.IMACS
+{
+	background-color: #ffd6c9;
+}
+
+.IC
+{
+	background-color: #ffad96;
+}
+
+.ICBE
+{
+	background-color: #ffd6c9;
+}
+
+.gras
+{
+	font-weight: bold;
+}
+
+.titre
+{
+	color: #c93000;
+	font-style: italic;
+}
