@@ -6,10 +6,8 @@
 @media only screen and (min-width: 721px) {
   body{
 <<<<<<< HEAD
-	font-family: Verdana, sans-serif;
 	background-color: #EEE;
 =======
-	font-family: Verdana, sans-serif;
 	background-color:#EEE;
 >>>>>>> 56a71a109a4f0ee08a2af726e170e464ef0e2a4f
 
@@ -21,7 +19,6 @@
 	margin: 3% auto ;
 	margin-top: 100px;
 	padding: 15px 3% 20px 3%;
-	font-family: Verdana, sans-serif;
 }
 
 }
@@ -29,7 +26,6 @@
 /* Tablet Styles */
 @media only screen and (max-width: 720px) {
 body{
-	font-family: Verdana, sans-serif;
 	background-color : white;
 }
 #contenu {
@@ -44,6 +40,7 @@ body{
 	
 body
 {
+	font-family: Verdana, sans-serif;
 	min-height: 1200px;
 }
 	
