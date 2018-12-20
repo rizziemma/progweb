@@ -11,54 +11,56 @@
   </head>
 
   <body>
-    <span id="menu">
-          <div class="lapnav" id="lapnav" style="opacity:1">
+    	<span id="menu">
+		  		<div class="lapnav" id="lapnav" style="opacity:1">
         <ul>
-                <a class="left" href="./accueil/accueil.html"><i class="fa fa-fw fa-home"></i> Accueil</a> 
-                <a class = "right" href="./about.html"><i class="fa fa-fw fa-info"></i>A propos</a>
-                <a href="./map.html"  class = "right"><i class="fa fa-fw fa-university"></i> Universités</a> 
-                <a class = "right" href="./contact.html"><i class="fa fa-fw fa-envelope"></i> Contacts</a> 
+                <a class="left" href="accueil/accueil.html"><i class="fa fa-fw fa-home"></i> Accueil</a> 
+                <a class = "right" href="about.html"><i class="fa fa-fw fa-info"></i>A propos</a>
+                <a href="map.html"  class = "right"><i class="fa fa-fw fa-university"></i> Universités</a> 
+                <a class = "right" href="contact.html"><i class="fa fa-fw fa-envelope"></i> Contacts</a> 
 
         </ul>
       </div>
-        
+      	
 
       <!--mobile menu-->
       <div id="mobnav">
           <div id="mySidenav" class="sidenav">
             <ul>
                 <a href="javascript:void(0)" class="closebtn"  onclick="closeNav()">&times;</a>
-                <a href="accueil.html">Accueil</a>
-                <a href="../map.html">Universités</a>
-                <a href="../contact.html">Contacts</a>
-                <a href="../about.html">A propos</a>
+                <a href="accueil/accueil.html">Accueil</a>
+                <a href="map.html">Universités</a>
+                <a href="contact.html">Contacts</a>
+                <a href="about.html">A propos</a>
               </ul>
           </div>
 
       
-          <span style="font-size:30px;cursor:pointer" onclick="interNav()">&#9776;</span>
+          <span id="bouton_menu" style="cursor:pointer" onclick="interNav()">&#9776;</span>
 
       </div>
 
       <script>
           let open = false;
+		  document.getElementById("mySidenav").style.width = "0";
 
           function openNav() {
-              document.getElementById("mySidenav").style.width = "40%";
+              document.getElementById("mySidenav").style.width = "60%";
+			  open = true;
           }
           function closeNav() {
               document.getElementById("mySidenav").style.width = "0";
+			  open = false;
           }
 
           function interNav() {
               if (open){ 
                   closeNav();
-                  open=false;
               }else{
                   openNav();
-                  open=true;
               }
           }
+
 
           
 
