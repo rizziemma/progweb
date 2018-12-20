@@ -7,47 +7,30 @@
     max-width: 15%;
 }
 
-.po
-{
-	display:flex;
-	flex-direction: row;
-}
-
-.paquet
-{
-	display:flex;
-	flex-direction: column;
-	width: 25%;
-}
-
-.block
-{
-	display: block;
-}
-
-.MIC
-{
-	background-color: #ffad96;
-}
-
-.IMACS
-{
-	background-color: #ffd6c9;
-}
-
-.IC
-{
-	background-color: #ffad96;
-}
-
-.ICBE
-{
-	background-color: #ffd6c9;
-}
-
 .gras
 {
 	font-weight: bold;
+}
+
+.role, .blanc
+{
+	color: #635242 ;
+}
+
+.clair, .leger
+{
+	color: #c93000;
+	opacity: 0.7;
+}
+
+.attention
+{
+	color: #8c5427;
+}
+
+.souli
+{
+	text-decoration: underline;
 }
 
 .titre
@@ -55,3 +38,129 @@
 	color: #c93000;
 	font-style: italic;
 }
+
+
+/* ------------------- BLOCKS ------------------- */
+
+.contenu
+{
+	display: flex;
+	flex-direction: column;
+}
+
+.les4, .les2
+{
+	padding: 2PX 2PX 10PX 20PX;
+}
+
+.po
+{
+	display:flex;
+	flex-flow: row wrap;
+	
+}
+
+.paquet
+{
+	display:block;
+	flex-direction: column;
+	padding: 2PX 2PX 2PX 20PX;
+}
+
+@media only screen and (min-width: 1000px) {
+	.po
+	{
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+	.paquet{
+
+	width: 20%;
+	}
+
+	.MIC , .IC
+	{
+		background-color: rgb(247, 201, 131, 0.3);
+	}
+
+
+	.IMACS , .ICBE
+	{
+		background-color: rgb(252, 145, 96, 0.3);
+	}
+}
+
+@media only screen and (max-width: 999px) and (min-width: 721px) {
+	.po
+	{
+		flex-flow: : row wrap;
+	}
+
+	.paquet{
+
+	width: 43%;
+	margin: 1% 1% 1% 1%;
+	}
+
+	.MIC , .ICBE
+	{
+		background-color: rgb(247, 201, 131, 0.3);
+	}
+
+
+	.IMACS, .IC
+	{
+		background-color: rgb(252, 145, 96, 0.3) ;
+	}
+}
+
+@media only screen and (max-width: 720px) {
+	.po
+	{
+		flex-direction: : column;
+	}
+
+	.paquet{
+
+	width: 90%;
+	margin: 1% 1% 1% 1%;
+
+	}
+
+	.MIC , .IC
+	{
+		background-color: rgb(247, 201, 131, 0.3);
+	}
+
+
+	.IMACS , .ICBE
+	{
+		background-color: rgb(252, 145, 96, 0.3) ;
+	}
+}
+
+.block
+{
+	display: block;
+	margin: 1px 1px 1px 1px ;
+}
+
+.groblock
+{
+	display: block;
+	margin: 20px 0px 20px 0px ;
+}
+
+.les4
+{
+	background-color: rgb(255, 214, 201, 0.6);
+}
+
+.les2
+{
+	background-color: rgb(230, 177, 133, 0.4);
+}
+
+
+/* --#ff6c47-#ffad96-#ffd6c9---------------------------------------------- */
